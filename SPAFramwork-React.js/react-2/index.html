@@ -45,25 +45,27 @@
 
         switch (hash) {
           case 'page1':
-            contentDiv.innerHTML = component('h1', { style: 'color:blue;' }, ['This is Page 1']);
+            contentDiv.innerHTML = component('h1 ', { style: 'color:blue;' }, ['This is Page 1']);
             break;
           case 'page2':
-            contentDiv.innerHTML = component('div', { style: 'background-color:cadetblue;' }, [
+            contentDiv.innerHTML = component('div ', { style: 'background-color:cadetblue;' }, [
               component('h1', {}, ['This is Page 2']),
             ]);
+            break
           case 'page3':
             contentDiv.innerHTML = component(
               'div',
               { style: 'display:flex; justifly-content:center; color: #ff2222;' },
               [component('h1', {}, ['This is Page 3'])]
             );
+            break
           case 'page4':
-            contentDiv.innerHTML = component('div', { style: 'display:flex; justifly-content:center; color: #333;' }, [
+            contentDiv.innerHTML = component('div ', { style: 'display:flex; justifly-content:center; color: #333;' }, [
               component('h1', {}, ['This is Page 4']),
             ]);
             break;
           default: // 조건이 모두다 부합하지 않을 때, 즉 false 일때 default가 실행된다. 최초 접속에는 hash가 없기 때문에 defult가 실행된다.
-          contentDiv.innerHTML = component('h1', {}, ['반갑습니다. 접속할 때 보이는 페이지(처럼보이는) element입니다.']);
+          contentDiv.innerHTML = component('h1 ', {}, ['반갑습니다. 접속할 때 보이는 페이지(처럼보이는) element입니다.']);
         }
       });
 
